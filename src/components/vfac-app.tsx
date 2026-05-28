@@ -1100,6 +1100,7 @@ function RoleSpecificPanels({
 export function VfacApp({ data }: Props) {
   const [loggedUser, setLoggedUser] = useState<User | null>(null);
   const [selectedRole, setSelectedRole] = useState<Role>("client");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const selectedUser =
     data.users.find((user) => user.role === selectedRole) ?? data.users[0];
   const residence = data.residences[0];
@@ -1114,11 +1115,13 @@ export function VfacApp({ data }: Props) {
   function handleLogin(user: User) {
     setLoggedUser(user);
     setSelectedRole(user.role);
+    setMobileMenuOpen(false);
   }
 
   function handleLogout() {
     setLoggedUser(null);
     setSelectedRole("client");
+    setMobileMenuOpen(false);
   }
 
   if (!loggedUser) {
@@ -1129,67 +1132,83 @@ export function VfacApp({ data }: Props) {
 
   return (
     <div className="shell">
-      <aside className={`sidebar ${canSimulateRoles ? "master-sidebar" : ""}`}>
+      <aside
+        className={`sidebar ${canSimulateRoles ? "master-sidebar" : ""} ${
+          mobileMenuOpen ? "mobile-open" : ""
+        }`}
+      >
         <div className="brand">
           <div className="brand-mark">vF</div>
           <div>
             <h1>vFac POC</h1>
             <p>Inventario vivo da residencia.</p>
           </div>
+          <button
+            className="mobile-menu-button"
+            onClick={() => setMobileMenuOpen((isOpen) => !isOpen)}
+            type="button"
+          >
+            {mobileMenuOpen ? "Fechar" : "Menu"}
+          </button>
         </div>
 
-        <nav className="side-nav" aria-label="Navegacao principal">
-          <button className="active" type="button">
-            <span>Db</span> Dashboard
-          </button>
-          <button type="button">
-            <span>In</span> Inventario
-          </button>
-          <button type="button">
-            <span>Dm</span> Demandas
-          </button>
-          <button type="button">
-            <span>$</span> Creditos
-          </button>
-        </nav>
+        <div className="mobile-menu-content">
+          <nav className="side-nav" aria-label="Navegacao principal">
+            <button className="active" type="button">
+              <span>Db</span> Dashboard
+            </button>
+            <button type="button">
+              <span>In</span> Inventario
+            </button>
+            <button type="button">
+              <span>Dm</span> Demandas
+            </button>
+            <button type="button">
+              <span>$</span> Creditos
+            </button>
+          </nav>
 
-        <div>
-          <small>{canSimulateRoles ? "Simular perfil" : "Acesso atual"}</small>
-          <div className="role-list" style={{ marginTop: 10 }}>
-            {(canSimulateRoles ? data.users : [loggedUser]).map((user) => (
-              <button
-                className={`role-button ${user.role === selectedRole ? "active" : ""}`}
-                disabled={!canSimulateRoles}
-                key={user.id}
-                onClick={() => setSelectedRole(user.role)}
-                type="button"
-              >
-                <strong>{user.label}</strong>
-                <small>{user.name}</small>
-              </button>
-            ))}
+          <div>
+            <small>{canSimulateRoles ? "Simular perfil" : "Acesso atual"}</small>
+            <div className="role-list" style={{ marginTop: 10 }}>
+              {(canSimulateRoles ? data.users : [loggedUser]).map((user) => (
+                <button
+                  className={`role-button ${user.role === selectedRole ? "active" : ""}`}
+                  disabled={!canSimulateRoles}
+                  key={user.id}
+                  onClick={() => {
+                    setSelectedRole(user.role);
+                    setMobileMenuOpen(false);
+                  }}
+                  type="button"
+                >
+                  <strong>{user.label}</strong>
+                  <small>{user.name}</small>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div
-          className="session-box"
-          data-initials={loggedUser.name
-            .split(" ")
-            .map((namePart) => namePart[0])
-            .join("")
-            .slice(0, 2)}
-        >
-          <small>Logado como</small>
-          <strong>{loggedUser.name}</strong>
-          <span>{loggedUser.email}</span>
-          <button className="button secondary" onClick={handleLogout} type="button">
-            Sair
-          </button>
-        </div>
+          <div
+            className="session-box"
+            data-initials={loggedUser.name
+              .split(" ")
+              .map((namePart) => namePart[0])
+              .join("")
+              .slice(0, 2)}
+          >
+            <small>Logado como</small>
+            <strong>{loggedUser.name}</strong>
+            <span>{loggedUser.email}</span>
+            <button className="button secondary" onClick={handleLogout} type="button">
+              Sair
+            </button>
+          </div>
 
-        <small>
-          Dados simulados em JSON, prontos para evoluir para PostgreSQL/Prisma.
-        </small>
+          <small>
+            Dados simulados em JSON, prontos para evoluir para PostgreSQL/Prisma.
+          </small>
+        </div>
       </aside>
 
       <main className="main">

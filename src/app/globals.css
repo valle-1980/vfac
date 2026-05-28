@@ -313,6 +313,14 @@ button:disabled {
   gap: 8px;
 }
 
+.mobile-menu-button {
+  display: none;
+}
+
+.mobile-menu-content {
+  display: contents;
+}
+
 .side-nav button,
 .role-button {
   min-height: 42px;
@@ -1524,6 +1532,7 @@ button:disabled {
 
   .brand {
     min-height: auto;
+    width: 100%;
   }
 
   .brand p {
@@ -1534,6 +1543,29 @@ button:disabled {
     width: 34px;
     height: 34px;
     border-radius: 9px;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    min-height: 34px;
+    border: 0;
+    border-radius: 999px;
+    background: #eef1ff;
+    color: var(--primary);
+    padding: 7px 13px;
+    font-weight: 900;
+  }
+
+  .mobile-menu-content {
+    display: none;
+  }
+
+  .sidebar.mobile-open .mobile-menu-content {
+    display: grid;
+    gap: 10px;
   }
 
   .side-nav {
@@ -1605,8 +1637,8 @@ button:disabled {
     padding: 7px 11px;
   }
 
-  .sidebar > small:last-child,
-  .sidebar > div:has(.role-list) > small {
+  .mobile-menu-content > small,
+  .mobile-menu-content > div:has(.role-list) > small {
     display: none;
   }
 

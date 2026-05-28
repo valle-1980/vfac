@@ -1515,28 +1515,67 @@ button:disabled {
   .sidebar {
     height: auto;
     min-height: 0;
-    padding: 16px;
-    gap: 14px;
+    padding: 10px 12px 12px;
+    gap: 10px;
     overflow: hidden;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .brand {
     min-height: auto;
   }
 
+  .brand p {
+    display: none;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+
   .side-nav {
-    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    display: flex;
     overflow-x: auto;
     padding-bottom: 2px;
+    gap: 8px;
+    scrollbar-width: none;
+  }
+
+  .side-nav::-webkit-scrollbar,
+  .role-list::-webkit-scrollbar {
+    display: none;
   }
 
   .side-nav button {
+    min-width: max-content;
+    min-height: 34px;
+    padding: 7px 10px;
+    border-radius: 999px;
     white-space: nowrap;
+    background: #f0f3fb;
   }
 
   .role-list {
-    grid-template-columns: repeat(5, minmax(140px, 1fr));
+    display: flex;
     overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .role-button {
+    min-width: max-content;
+    min-height: 34px;
+    border-radius: 999px;
+    padding: 7px 11px;
+    background: #f0f3fb;
+  }
+
+  .role-button small {
+    display: none;
   }
 
   .master-sidebar .role-list {
@@ -1546,10 +1585,28 @@ button:disabled {
 
   .session-box {
     margin-top: 0;
-    max-width: 420px;
+    max-width: none;
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    padding: 0;
+    gap: 4px 9px;
   }
 
-  .sidebar > small:last-child {
+  .session-box::before {
+    width: 34px;
+    height: 34px;
+    grid-row: 1 / span 2;
+  }
+
+  .session-box .button {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    margin-top: 0;
+    min-height: 32px;
+    padding: 7px 11px;
+  }
+
+  .sidebar > small:last-child,
+  .sidebar > div:has(.role-list) > small {
     display: none;
   }
 
@@ -1604,14 +1661,14 @@ button:disabled {
 
   .main,
   .sidebar {
-    padding: 14px;
+    padding: 10px 12px;
   }
 
   .page-head {
     display: grid;
     gap: 12px;
-    margin: 0 -14px;
-    padding: 12px 14px 14px;
+    margin: 0 -12px;
+    padding: 12px;
   }
 
   .page-head h2 {
@@ -1789,20 +1846,32 @@ button:disabled {
 }
 
 @media (max-width: 420px) {
+  .sidebar {
+    gap: 8px;
+  }
+
   .brand h1 {
     font-size: 1rem;
   }
 
-  .brand p {
-    font-size: 0.78rem;
+  .brand {
+    gap: 9px;
   }
 
   .side-nav {
-    grid-template-columns: repeat(4, minmax(102px, 1fr));
+    margin: 0 -2px;
   }
 
   .role-list {
-    grid-template-columns: repeat(5, minmax(126px, 1fr));
+    margin: 0 -2px;
+  }
+
+  .side-nav span {
+    display: none;
+  }
+
+  .session-box span {
+    display: none;
   }
 
   .button,

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "room_001",
+    "residenceId": "res_001",
+    "name": "Suite casal",
+    "category": "Interno",
+    "items": 7
+  },
+  {
+    "id": "room_002",
+    "residenceId": "res_001",
+    "name": "Cozinha",
+    "category": "Interno",
+    "items": 9
+  },
+  {
+    "id": "room_003",
+    "residenceId": "res_001",
+    "name": "Area da piscina",
+    "category": "Externo",
+    "items": 8
+  },
+  {
+    "id": "room_004",
+    "residenceId": "res_001",
+    "name": "Sala principal",
+    "category": "Interno",
+    "items": 6
+  }
+]

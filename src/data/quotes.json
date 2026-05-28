@@ -1,0 +1,38 @@
+[
+  {
+    "id": "quo_001",
+    "serviceRequestId": "srv_002",
+    "providerId": "pro_001",
+    "status": "Pendente",
+    "laborCredits": 40,
+    "materialCredits": 20,
+    "travelCredits": 30,
+    "totalCredits": 90,
+    "withMaterial": true,
+    "eta": "Hoje, 16h-18h"
+  },
+  {
+    "id": "quo_002",
+    "serviceRequestId": "srv_002",
+    "providerId": "pro_003",
+    "status": "Pendente",
+    "laborCredits": 45,
+    "materialCredits": 0,
+    "travelCredits": 20,
+    "totalCredits": 65,
+    "withMaterial": false,
+    "eta": "Amanha, 9h-11h"
+  },
+  {
+    "id": "quo_003",
+    "serviceRequestId": "srv_003",
+    "providerId": "pro_003",
+    "status": "Aprovado",
+    "laborCredits": 160,
+    "materialCredits": 60,
+    "travelCredits": 40,
+    "totalCredits": 260,
+    "withMaterial": true,
+    "eta": "Auditoria hoje, 14h"
+  }
+]

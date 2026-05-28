@@ -1,0 +1,10 @@
+[
+  {
+    "id": "aud_001",
+    "serviceRequestId": "srv_003",
+    "type": "Auditoria presencial",
+    "status": "Agendada",
+    "reason": "Intercorrencia com risco de dano oculto",
+    "scheduledFor": "2026-05-28 14:00"
+  }
+]

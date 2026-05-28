@@ -1,0 +1,11 @@
+[
+  {
+    "id": "wal_001",
+    "residenceId": "res_001",
+    "cycle": "2026-05",
+    "monthlyCredits": 1000,
+    "usedCredits": 325,
+    "availableCredits": 675,
+    "expiresAt": "2026-05-31"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "res_001",
+    "ownerId": "usr_cliente_001",
+    "name": "Residencia Jardim Europa",
+    "type": "Casa de rua",
+    "standard": "Premium",
+    "plan": "Premium 1000",
+    "mappingMode": "Preditivo",
+    "addressLabel": "Sao Paulo, SP",
+    "areaM2": 420,
+    "roomsCount": 11,
+    "inventoryCount": 38
+  }
+]

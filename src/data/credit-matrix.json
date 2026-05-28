@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mat_001",
+    "category": "Eletrica",
+    "service": "Troca de lampada comum",
+    "complexity": "Simples",
+    "laborCredits": 40,
+    "materialCredits": 20,
+    "travelCredits": 30,
+    "totalWithMaterial": 90,
+    "totalWithoutMaterial": 70,
+    "firstVisitEligible": true
+  },
+  {
+    "id": "mat_002",
+    "category": "Hidraulica",
+    "service": "Diagnostico de vazamento aparente",
+    "complexity": "Media",
+    "laborCredits": 160,
+    "materialCredits": 60,
+    "travelCredits": 40,
+    "totalWithMaterial": 260,
+    "totalWithoutMaterial": 200,
+    "firstVisitEligible": false
+  },
+  {
+    "id": "mat_003",
+    "category": "Climatizacao",
+    "service": "Limpeza de filtro de ar-condicionado",
+    "complexity": "Simples",
+    "laborCredits": 100,
+    "materialCredits": 0,
+    "travelCredits": 40,
+    "totalWithMaterial": 140,
+    "totalWithoutMaterial": 140,
+    "firstVisitEligible": true
+  },
+  {
+    "id": "mat_004",
+    "category": "Piscina",
+    "service": "Limpeza tecnica de filtro",
+    "complexity": "Media",
+    "laborCredits": 130,
+    "materialCredits": 30,
+    "travelCredits": 40,
+    "totalWithMaterial": 200,
+    "totalWithoutMaterial": 170,
+    "firstVisitEligible": true
+  }
+]

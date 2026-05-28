@@ -1,0 +1,44 @@
+[
+  {
+    "id": "srv_001",
+    "residenceId": "res_001",
+    "createdBy": "system",
+    "title": "Manutencao preventiva do ar-condicionado",
+    "category": "Climatizacao",
+    "room": "Suite casal",
+    "status": "Orcamento em disputa",
+    "priority": "Media",
+    "origin": "Sistema",
+    "description": "Ciclo de limpeza do filtro e verificacao de dreno esta proximo.",
+    "providerVisibleToClient": false,
+    "estimatedCredits": 140
+  },
+  {
+    "id": "srv_002",
+    "residenceId": "res_001",
+    "createdBy": "employee",
+    "title": "Troca de lampada da sala principal",
+    "category": "Eletrica",
+    "room": "Sala principal",
+    "status": "Aguardando aprovacao",
+    "priority": "Baixa",
+    "origin": "Funcionario",
+    "description": "Lampada dicroica cadastrada no inventario. Sistema pode levar material correto.",
+    "providerVisibleToClient": false,
+    "estimatedCredits": 90
+  },
+  {
+    "id": "srv_003",
+    "residenceId": "res_001",
+    "createdBy": "client",
+    "title": "Umidade na parede da cozinha",
+    "category": "Hidraulica",
+    "room": "Cozinha",
+    "status": "Intercorrencia",
+    "priority": "Alta",
+    "origin": "Cliente",
+    "description": "Cliente reportou mancha nova proxima ao armario inferior.",
+    "providerVisibleToClient": true,
+    "estimatedCredits": 260
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "inv_001",
+    "roomId": "room_001",
+    "name": "Ar-condicionado split",
+    "category": "Climatizacao",
+    "status": "Manutencao preventiva sugerida",
+    "nextService": "2026-06-12",
+    "notes": "Limpeza de filtro e verificacao de dreno."
+  },
+  {
+    "id": "inv_002",
+    "roomId": "room_002",
+    "name": "Parede hidraulica da pia",
+    "category": "Hidraulica",
+    "status": "Em observacao",
+    "nextService": "2026-06-03",
+    "notes": "Cliente relatou umidade em vistoria anterior."
+  },
+  {
+    "id": "inv_003",
+    "roomId": "room_003",
+    "name": "Bomba da piscina",
+    "category": "Piscina",
+    "status": "Ciclo ok",
+    "nextService": "2026-07-04",
+    "notes": "Equipamento com 5 anos de uso."
+  },
+  {
+    "id": "inv_004",
+    "roomId": "room_004",
+    "name": "Lampada dicroica GU10",
+    "category": "Eletrica",
+    "status": "Material conhecido",
+    "nextService": "Sob demanda",
+    "notes": "Marca e tipo cadastrados para atendimento em primeira visita."
+  },
+  {
+    "id": "inv_005",
+    "roomId": "room_003",
+    "name": "Deck externo",
+    "category": "Marcenaria",
+    "status": "Auditoria recomendada",
+    "nextService": "2026-06-20",
+    "notes": "Risco de desgaste por sol e umidade."
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "pro_001",
+    "firstName": "Rafael",
+    "company": "Volt Prime Servicos",
+    "document": "CPF ***.342.118-**",
+    "categories": ["Eletrica", "Pequenos reparos"],
+    "rating": 4.8,
+    "status": "Credenciado"
+  },
+  {
+    "id": "pro_002",
+    "firstName": "Bianca",
+    "company": "AquaCasa Piscinas",
+    "document": "CPF ***.781.902-**",
+    "categories": ["Piscina"],
+    "rating": 4.7,
+    "status": "Credenciado"
+  },
+  {
+    "id": "pro_003",
+    "firstName": "Equipe propria",
+    "company": "vFac Operacoes",
+    "document": "CNPJ **.129.441/0001-**",
+    "categories": ["Concierge", "Auditoria", "Pequenos reparos"],
+    "rating": 4.9,
+    "status": "Equipe propria"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "usr_cliente_001",
+    "name": "Marina Azevedo",
+    "email": "cliente@vfac.local",
+    "password": "123456",
+    "role": "client",
+    "label": "Cliente final",
+    "description": "Dona da residencia, aprova orcamentos, acompanha creditos e historico."
+  },
+  {
+    "id": "usr_func_001",
+    "name": "Carlos Mendes",
+    "email": "funcionario@vfac.local",
+    "password": "123456",
+    "role": "employee",
+    "label": "Funcionario do cliente",
+    "description": "Registra problemas, envia fotos e acompanha visitas autorizadas."
+  },
+  {
+    "id": "usr_admin_001",
+    "name": "Operacao vFac",
+    "email": "admin@vfac.local",
+    "password": "123456",
+    "role": "admin",
+    "label": "Administrador",
+    "description": "Controla prestadores, disputas, intercorrencias e auditorias."
+  },
+  {
+    "id": "usr_provider_001",
+    "name": "Rafael",
+    "email": "prestador@vfac.local",
+    "password": "123456",
+    "role": "provider",
+    "label": "Prestador",
+    "description": "Recebe oportunidades, envia orcamentos e registra execucao."
+  },
+  {
+    "id": "usr_ti_001",
+    "name": "TI Master",
+    "email": "ti@vfac.local",
+    "password": "123456",
+    "role": "it",
+    "label": "TI / Master",
+    "description": "Simula perfis, audita logs e valida permissoes."
+  }
+]
